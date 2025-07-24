@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: /includes/
+
+Sitemap: https://www.dominio.com.br/sitemap-reg.xml

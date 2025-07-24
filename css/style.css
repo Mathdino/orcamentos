@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+  --color-primary: #7eaa36;
+  --color-primary-dark: #4b6b17;
+  --color-secondary: #7eaa36;
+  --color-secondary-dark: #4b6b17;
+  --color-accent: #f79809;
+  --color-accent-dark: #f06606;
+  --color-bg: #fff;
+  --color-bg-light: #f8f8f8;
+  --color-text: #232423;
+  --color-text-light: #fff;
+  --color-logo: #232423;
+  --color-footer-bg: #232423;
+  --color-footer-link: #f79809;
+  --color-whatsapp: #25d366;
+  --color-whatsapp-dark: #09642a;
+  --color-cinza: #9a9793;
+  --font-main: "Barlow", sans-serif;
+  --font-secondary: "Barlow", sans-serif;
+}
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background: #080d10;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.hero {
+  background: var(--color-secondary);
+  color: var(--color-text-light);
+  padding: 48px 0 32px 0;
+  text-align: center;
+}
+.servicos ul,
+.regioes ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 0;
+  list-style: none;
+}
+.servicos li,
+.regioes li {
+  background: var(--color-bg);
+  border-radius: 4px;
+  padding: 16px 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+}
+.orcamento form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--color-bg);
+  padding: 24px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  max-width: 500px;
+  margin: 0 auto;
+}
+.orcamento input,
+.orcamento textarea {
+  padding: 10px;
+  border: 1px solid var(--color-cinza);
+  border-radius: 4px;
+  font-size: 1rem;
+}
+.orcamento button {
+  background: var(--color-secondary-dark);
+  color: var(--color-text-light);
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.orcamento button:hover {
+  background: var(--color-secondary);
+}
+.whatsapp-float {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1000;
+  background: var(--color-whatsapp);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background 0.2s;
+  animation: float-whatsapp 2s ease-in-out infinite;
+}
+@keyframes float-whatsapp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.whatsapp-float:hover {
+  background: var(--color-whatsapp-dark);
+}
+.whatsapp-float img {
+  width: 36px;
+  height: 36px;
+}
+.whatsapp-btn {
+  display: inline-block;
+  background-color: #059c1b;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  padding: 12px 15px !important;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  animation: pulse 1.5s infinite;
+}
+
+.whatsapp-btn:hover {
+  background-color: #047a15;
+  transform: scale(1.05);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(5, 156, 27, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(5, 156, 27, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(5, 156, 27, 0);
+  }
+}
+
+@media (max-width: 700px) {
+  .banner-pintura-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 8px 16px 8px;
+  }
+  .pintura-animada {
+    margin-right: 0;
+    margin-bottom: 18px;
+  }
+  .banner-texto h1 {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 1024px) {
+  .container {
+    max-width: 98vw;
+    padding: 0 8px;
+  }
+}
+@media (max-width: 700px) {
+  .container {
+    padding: 0 4px;
+  }
+  .hero {
+    padding: 32px 0 20px 0;
+  }
+  .servicos ul,
+  .regioes ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .servicos li,
+  .regioes li {
+    padding: 12px 10px;
+    font-size: 1rem;
+  }
+  .orcamento form {
+    padding: 12px;
+    max-width: 100%;
+  }
+  .orcamento input,
+  .orcamento textarea {
+    font-size: 0.98rem;
+  }
+}
+@media (max-width: 480px) {
+  .orcamento form {
+    padding: 6px;
+  }
+  .whatsapp-float {
+    width: 48px;
+    height: 48px;
+    right: 12px;
+    bottom: 12px;
+  }
+  .whatsapp-float img {
+    width: 28px;
+    height: 28px;
+  }
+}
