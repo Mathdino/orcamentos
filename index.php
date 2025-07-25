@@ -57,7 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nome'], $_POST['email
                 <a href="">Cases de Sucesso →</a>
             </div>
         </div>
-
     </section>
 
     <section id="video">
@@ -111,6 +110,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nome'], $_POST['email
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="depoimentos">
+        <div class="container title-depoimentos">
+            <span>Depoimentos de nossos Clientes</span>
+            <h2>Nosso <b>cliente</b> em destaque, vence</h2>
         </div>
     </section>
 
