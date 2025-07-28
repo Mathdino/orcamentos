@@ -44,17 +44,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nome'], $_POST['email
 
     <section id="home">
         <div class="container">
-            <span>Startup de Desenvolvimento de Sistemas de Orçamentos</span>
-            <h1>Simplifique seu negócio com um <br><b>sistema de orçamentos inteligente</b></h1>
+            <span class="animated-slide-up animated-delay-1">Startup de Desenvolvimento de Sistemas de Orçamentos</span>
+            <h1 class="animated-slide-up animated-delay-2">Simplifique seu negócio com um <br><b>sistema de orçamentos inteligente</b></h1>
             <div class="cta-buttons">
-                <a href="https://wa.me/5511910064302?text=Olá%2C+gostaria+de+conversar+sobre+o+sistema+Orcamentos!" target="_blank" rel="noopener" title="Link para Whatsapp">
+                <a class="animated-slide-up animated-delay-3" href="https://wa.me/5511910064302?text=Olá%2C+gostaria+de+conversar+sobre+o+sistema+Orcamentos!" target="_blank" rel="noopener" title="Link para Whatsapp">
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
                     Vamos Conversar
                 </a>
-                <a href="">Cases de Sucesso →</a>
+                <a class="animated-slide-up animated-delay-4" href="#depoimentos">Cases de Sucesso →</a>
             </div>
         </div>
     </section>
@@ -65,45 +65,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nome'], $_POST['email
             <div class="conteudo-video">
                 <h2>Gerencie seus orçamentos de forma <b>simples</b> e <b>eficiente</b></h2>
                 <div class="scroll-direita1">
-                    <span>Nossos sistemas contam com as funcionalidades:</span>
+                    <span class="animated-slide-up animated-delay-1">Nossos sistemas contam com as funcionalidades:</span>
                     <div class="funcionalidades">
-                        <div class="cards-funcionalidades">
+                        <div class="cards-funcionalidades animated-slide-up animated-delay-2">
                             <img src="./imagens/icon-pdf.png" alt="Icone de PDF" width="80" height="80">
                             <h3>PDFs PERSONALIZADOS</h3>
                         </div>
-                        <div class="cards-funcionalidades">
+                        <div class="cards-funcionalidades animated-slide-up animated-delay-3">
                             <img src="./imagens/icon-ferramenta.png" alt="Icone de Ferramenta" width="80" height="80">
                             <h3>GESTÃO DE OBRAS</h3>
                         </div>
-                        <div class="cards-funcionalidades">
+                        <div class="cards-funcionalidades animated-slide-up animated-delay-4">
                             <img src="./imagens/icon-dinheiro.png" alt="Icone de Dinheiro" width="80" height="80">
                             <h3>SISTEMA FINANCEIRO</h3>
                         </div>
-                        <div class="cards-funcionalidades">
+                        <div class="cards-funcionalidades animated-slide-up animated-delay-5">
                             <img src="./imagens/icon-cliente.png" alt="Icone de Cliente" width="80" height="80">
                             <h3>CADASTRO DE CLIENTES</h3>
                         </div>
-
                     </div>
                 </div>
                 <div class="scroll-direita2">
-                    <span><strong>ORCAME</strong><b>NTOS</b> em números</span>
+                    <span class="animated-slide-up animated-delay-1"><strong>ORCAME</strong><b>NTOS</b> em números</span>
                     <div class="funcionalidades">
                         <div class="linha1">
-                            <div class="card-1">
+                            <div class="card-1 animated-slide-up animated-delay-2">
                                 <h4><strong>100%</strong><br>Satisfação do cliente</h4>
                             </div>
-                            <div class="card-2">
+                            <div class="card-2 animated-slide-up animated-delay-3">
                                 <h4><strong>25+</strong><br>Sistemas Concluídos</h4>
                             </div>
                         </div>
                     </div>
                     <div class="funcionalidades part2">
                         <div class="linha1">
-                            <div class="card-3">
+                            <div class="card-3 animated-slide-up animated-delay-4">
                                 <h4><strong>125K</strong><br>Investimentos captados <br>por nossos clientes</h4>
                             </div>
-                            <div class="card-4">
+                            <div class="card-4 animated-slide-up animated-delay-5">
                                 <h4><strong>10+</strong><br>Sites Concluídos</h4>
                             </div>
                         </div>
@@ -122,9 +121,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nome'], $_POST['email
 
     <section id="orcamento" class="orcamento">
         <div class="container">
-            <div class="title-section text-center">
-                <h3>Solicite seu Orçamento</h3>
-            </div>
+        <div class="title-orcamento">
+            <h2>Solicite um Orcame<b>ntos</b></h2>
+        </div>
             <?php if ($mensagem_enviada): ?>
                 <div class="mensagem-enviada">
                     <p>Sua mensagem foi enviada com sucesso! Em breve entraremos em contato.</p>
@@ -132,10 +131,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nome'], $_POST['email
             <?php endif; ?>
             <?php if (!$mensagem_enviada): ?>
                 <form id="form-orcamento" method="post" action="index.php">
-                    <input type="text" name="nome" placeholder="Seu nome" required>
+                    <input type="text" name="nome" placeholder="Nome" required>
                     <input type="email" name="email" placeholder="Seu e-mail" required>
                     <input type="tel" name="telefone" placeholder="Seu telefone" required>
-                    <input type="text" name="regiao" placeholder="Região (ex: Cocaia)" required>
                     <textarea name="mensagem" placeholder="Descreva seu serviço" required></textarea>
                     <button type="submit">Enviar Orçamento</button>
                 </form>

@@ -129,6 +129,42 @@
   }
 }
 
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-slide-up {
+  opacity: 0;
+  animation: slideUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+  pointer-events: none;
+  animation-play-state: paused;
+}
+.animated-slide-up.start-animation {
+  /* Ativa a animação */
+  animation-play-state: running;
+  pointer-events: auto;
+}
+
+.animated-delay-1 {
+  animation-delay: 0.2s;
+}
+.animated-delay-2 {
+  animation-delay: 0.4s;
+}
+.animated-delay-3 {
+  animation-delay: 0.6s;
+}
+.animated-delay-4 {
+  animation-delay: 0.8s;
+}
+
 /*SECTION VIDEO*/
 
 .flex {
@@ -308,4 +344,21 @@
 
 .title-depoimentos {
   padding: 60px 0px;
+}
+
+#orcamento h2 {
+  font-size: 3.5rem;
+  font-weight: 500;
+  color: var(--color-bg);
+  margin-top: 20px;
+}
+
+#orcamento b {
+  color: var(--color-primary);
+}
+
+.title-orcamento {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

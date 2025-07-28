@@ -11,7 +11,7 @@
             <nav aria-label="Links internos">
                 <ul class="footer-links">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#sobre-nos">Sobre Nós</a></li>
+                    <li><a href="#">Funcionalidades</a></li>
                     <li><a href="#servicos">Serviços</a></li>
                     <li><a href="#orcamento">Orçamento</a></li>
                     <li><a href="#contato">Contato</a></li>
@@ -45,8 +45,8 @@
                     </li>
                 </ul>
             </div>
-            <p>Contato: <a class="link-email" href="mailto:contato@hscolor.com.br" title="Link para E-mail">contato@hscolor.com.br</a></p>
-            <p>&copy; <?php echo date('Y'); ?> HS Color - Todos os direitos reservados.</p>
+            <p>Contato: <a class="link-email" href="mailto:contato@hscolor.com.br" title="Link para E-mail">contato@orcamentos.com.br</a></p>
+            <p>&copy; <?php echo date('Y'); ?> Orcamentos - Todos os direitos reservados.</p>
         </div>
     </footer>
     <script type="application/ld+json">
