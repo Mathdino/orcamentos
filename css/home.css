@@ -343,7 +343,7 @@
 }
 
 .title-depoimentos {
-  padding: 60px 0px;
+  padding: 60px 0px 0px;
 }
 
 #orcamento h2 {
@@ -361,4 +361,155 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.clients {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  min-height: 360px;
+  background: #ffffff;
+  border-top: 1px solid #eaecef;
+  border-bottom: 1px solid #eaecef;
+  border-left: 0;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.client-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 360px;
+  border-left: 1px solid #eaecef;
+  overflow: hidden;
+}
+
+.client-item:nth-child(1) {
+  border-left: none;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 28px;
+  color: #0c1526;
+  opacity: 0.9;
+  transition: 0.25s ease;
+}
+
+/* ---------- HOVER CARD (em todos os cards) ---------- */
+.hover-card {
+  position: absolute;
+  inset: 16px;
+  left: auto;
+  background: #0b0f14;
+  color: #ffffff;
+  border-radius: 18px;
+  padding: 28px 24px;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateX(10px) scale(0.98);
+  transition: opacity 0.35s ease, transform 0.35s ease, filter 0.35s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.client-item:hover .hover-card,
+.client-item:focus-within .hover-card {
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  pointer-events: auto;
+}
+
+.client-item:hover .logo {
+  opacity: 0.15;
+}
+
+/* Conteúdo do card */
+.hc-title {
+  margin: 0 0 8px 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.hc-desc {
+  margin: 0 0 18px 0;
+  color: #ffffff;
+  line-height: 1.5;
+  font-size: 14px;
+  max-width: 36ch;
+}
+
+.hc-amount {
+  font-size: clamp(40px, 8vw, 68px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -1px;
+  color: var(--color-primary);
+  margin: 8px 0 20px;
+}
+
+.hc-tags {
+  display: flex;
+  gap: 10px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #11161d;
+  border: 1px solid #29313b;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #ffffff !important;
+  user-select: none;
+}
+
+/* ---------- Recortes curvos no lado direito ---------- */
+.hover-card .cutout {
+  position: absolute;
+  right: -40px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+}
+
+.hover-card .cutout-top {
+  top: -20px;
+}
+
+.hover-card .cutout-mid {
+  top: 120px;
+  width: 72px;
+  height: 72px;
+  right: -36px;
+}
+
+.hover-card .cutout-bottom {
+  bottom: -20px;
+}
+
+/* Responsivo opcional: empilha colunas no mobile */
+@media (max-width: 860px) {
+  .clients {
+    grid-template-columns: 1fr;
+  }
+  #depoimentos {
+    margin-bottom: 50px !important;
+    background-color: var(--color-bg) !important;
+    margin-top: 60px;
+    width: 100%;
+    padding: 40px 0px;
+    height: auto;
+  }
+  .hover-card {
+    inset: 0px;
+  }
 }

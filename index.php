@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nome'], $_POST['email
 
     <section id="home">
         <div class="container">
-            <span class="animated-slide-up animated-delay-1">Startup de Desenvolvimento de Sistemas de Orçamentos</span>
+            <span class="animated-slide-up animated-delay-1">Desenvolvimento de Sistemas de Orçamentos</span>
             <h1 class="animated-slide-up animated-delay-2">Simplifique seu negócio com um <br><b>sistema de orçamentos inteligente</b></h1>
             <div class="cta-buttons">
                 <a class="animated-slide-up animated-delay-3" href="https://wa.me/5511910064302?text=Olá%2C+gostaria+de+conversar+sobre+o+sistema+Orcamentos!" target="_blank" rel="noopener" title="Link para Whatsapp">
@@ -93,14 +93,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nome'], $_POST['email
                                 <h4><strong>100%</strong><br>Satisfação do cliente</h4>
                             </div>
                             <div class="card-2 animated-slide-up animated-delay-3">
-                                <h4><strong>25+</strong><br>Sistemas Concluídos</h4>
+                                <h4><strong>5+</strong><br>Sistemas Concluídos</h4>
                             </div>
                         </div>
                     </div>
                     <div class="funcionalidades part2">
                         <div class="linha1">
                             <div class="card-3 animated-slide-up animated-delay-4">
-                                <h4><strong>125K</strong><br>Investimentos captados <br>por nossos clientes</h4>
+                                <h4><strong>12K</strong><br>Investimentos captados <br>por nossos clientes</h4>
                             </div>
                             <div class="card-4 animated-slide-up animated-delay-5">
                                 <h4><strong>10+</strong><br>Sites Concluídos</h4>
@@ -117,13 +117,67 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nome'], $_POST['email
             <span>Depoimentos de nossos Clientes</span>
             <h2>Nosso <b>cliente</b> em destaque, vence</h2>
         </div>
+
+        <div class="clients">
+            <!-- CARD 1 -->
+            <div class="client-item">
+                <span class="logo">HS COLOR</span>
+
+                <a class="hover-card" href="#">
+                    <h4 class="hc-title">Hs Color</h4>
+                    <p class="hc-desc">
+                        Sistema Personalizado para uma empresa especializada em serviços de pintura e acabamentos, ajudando a economizar tempo do orçamento até a finalização da obra.
+                    </p>
+                    <div class="hc-amount">$1M</div>
+                    <div class="hc-tags">
+                        <span class="tag">PINTURA</span>
+                        <span class="tag"><img src="./imagens/BR.png" alt="Bandeira do Brasil">BR</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="client-item">
+                <span class="logo">PROXIMO PARCEIRO</span>
+
+                <a class="hover-card" href="#">
+                    <h4 class="hc-title">---</h4>
+                    <p class="hc-desc">
+                        SOLICITE UM ORCAMENTO E FAÇA PARTE DA NOVA FORMA DE CONTRATAR SERVIÇOS COM AGILIDADE, PRATICIDADE E ZERO BUROCRACIA!
+                    </p>
+                    <div class="hc-amount">+</div>
+                    <div class="hc-tags">
+                        <span class="tag">---</span>
+                        <span class="tag"><img src="./imagens/BR.png" alt="Bandeira do Brasil">BR</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="client-item">
+                <span class="logo">PROXIMO PARCEIRO</span>
+
+                <a class="hover-card" href="#">
+                    <h4 class="hc-title">---</h4>
+                    <p class="hc-desc">
+                        SOLICITE UM ORCAMENTO E FAÇA PARTE DA NOVA FORMA DE CONTRATAR SERVIÇOS COM AGILIDADE, PRATICIDADE E ZERO BUROCRACIA!
+                    </p>
+                    <div class="hc-amount">+</div>
+                    <div class="hc-tags">
+                        <span class="tag">---</span>
+                        <span class="tag"><img src="./imagens/BR.png" alt="Bandeira do Brasil">BR</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
     </section>
 
     <section id="orcamento" class="orcamento">
         <div class="container">
-        <div class="title-orcamento">
-            <h2>Solicite um Orcame<b>ntos</b></h2>
-        </div>
+            <div class="title-orcamento">
+                <h2>Solicite um Orcame<b>ntos</b></h2>
+            </div>
             <?php if ($mensagem_enviada): ?>
                 <div class="mensagem-enviada">
                     <p>Sua mensagem foi enviada com sucesso! Em breve entraremos em contato.</p>
