@@ -5,7 +5,8 @@
 
 #home span,
 #video span,
-#depoimentos span {
+#depoimentos span,
+#funcionalidades span {
   font-size: 1rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -170,25 +171,41 @@
 .flex {
   display: flex;
   justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .video-section {
-  height: 480px;
   border-radius: 15px;
-  background-color: var(--color-primary);
-  flex: 1;
+  flex: 0 0 700px;
   position: sticky;
   top: 120px;
   height: 400px;
-  min-width: 580px;
-  max-width: 700px;
+  width: 700px !important;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 8px;
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.5), 0 0 40px rgba(0, 255, 65, 0.3),
+    0 0 60px rgba(0, 255, 65, 0.1), inset 0 0 20px rgba(0, 255, 65, 0.2);
 }
+
+.video-section video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  background: #000;
+}
+
 .conteudo-video {
   color: var(--color-bg);
-  margin-left: 20px;
-  flex: 2;
+  flex: 1;
   max-height: none;
   overflow-y: visible;
+  min-width: 300px;
 }
 
 .conteudo-video h2 {
@@ -318,11 +335,18 @@
     position: static;
     min-width: 0;
     max-width: 100%;
-    height: 220px;
+    height: 280px;
+    margin-bottom: 30px;
+    padding: 6px;
+  }
+  .video-section video {
+    object-fit: cover;
+    border-radius: 8px;
   }
   .conteudo-video {
     max-height: none;
     overflow-y: visible;
+    margin-left: 0;
   }
 }
 
@@ -332,10 +356,11 @@
   background-color: var(--color-bg) !important;
   margin-top: 60px;
   width: 100%;
-  height: 800px;
+  height: auto;
 }
 
-#depoimentos h2 {
+#depoimentos h2,
+#funcionalidades h2 {
   font-size: 3.5rem;
   font-weight: 500;
   color: var(--color-text);
@@ -353,7 +378,8 @@
   margin-top: 20px;
 }
 
-#orcamento b {
+#orcamento b,
+#funcionalidades b {
   color: var(--color-primary);
 }
 
@@ -511,5 +537,449 @@
   }
   .hover-card {
     inset: 0px;
+  }
+}
+
+/*FUNCIONALIDADES CELULAR*/
+#funcionalidades {
+  background-color: #fff;
+  height: auto;
+  width: 100% !important;
+  position: relative;
+  overflow: hidden;
+  padding: 30px 0px;
+}
+
+#funcionalidades button {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  z-index: 10;
+  position: relative;
+}
+
+#funcionalidades button:hover {
+  background: var(--color-secondary-dark);
+  transform: translateY(-2px);
+}
+
+.grid {
+  padding: 0px;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Remover posicionamento absoluto e centralização via transform */
+  position: static;
+  top: unset;
+  left: unset;
+  width: 100%;
+  transform: rotateX(60deg) rotateZ(-50deg);
+  margin: 0 auto;
+  transform-style: preserve-3d;
+}
+
+.grid li {
+  width: 350px;
+  height: 680px;
+  list-style-type: none;
+  margin: 20px;
+  background-size: cover;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.grid li.one {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0)),
+    url("../imagens/orcamento-1.png");
+}
+
+.grid li.two {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0)),
+    url("../imagens/orcamento-2.png");
+}
+
+.grid li.three {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0)),
+    url("../imagens/orcamento-3.png");
+}
+
+.grid li:before,
+.grid li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: inherit;
+}
+
+/*Left Side*/
+.grid li:before {
+  transform-origin: left center;
+  transform: rotateY(90deg);
+  width: 5px;
+}
+
+.grid li:after {
+  transform-origin: bottom center;
+  transform: rotateX(90deg);
+  height: 5px;
+  top: auto;
+  bottom: 0;
+  background-position: bottom center;
+}
+
+.s {
+  position: absolute;
+  /*30px smaller from each side*/
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.5);
+  /*Pushing down the shadow to give an elevated feel*/
+  transform: translateZ(-50px);
+}
+
+.grid.toggle {
+  transform: rotateX(0) rotateZ(0);
+  /* Remover centralização via translate */
+}
+
+/* Responsividade para a seção de funcionalidades */
+@media (max-width: 1200px) {
+  .grid {
+    width: 800px;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    width: 600px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .grid li {
+    width: 180px;
+    height: 320px;
+    margin: 10px;
+  }
+
+  .title-funcionalidades h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 400px;
+  }
+
+  .grid li {
+    width: 150px;
+    height: 260px;
+    margin: 8px;
+  }
+
+  .title-funcionalidades h2 {
+    font-size: 1.5rem;
+  }
+
+  .title-funcionalidades p {
+    font-size: 1rem;
+  }
+}
+
+/*FUNCIONALIDADES CONTEÚDO*/
+#servico {
+  background-color: #fff;
+  margin-top: -15px;
+  padding: 0px 0px 60px 0px;
+}
+
+#servico .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.fancyTab {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #eee;
+  box-shadow: 0 0 0 1px #ddd;
+  top: 15px;
+  transition: top 0.2s;
+  position: relative;
+}
+
+.fancyTab.active {
+  top: 0;
+  transition: top 0.2s;
+}
+
+.whiteBlock {
+  display: none;
+}
+
+.fancyTab.active .whiteBlock {
+  display: block;
+  height: 2px;
+  bottom: -2px;
+  background-color: #fff;
+  width: 99%;
+  position: absolute;
+  z-index: 1;
+}
+
+.fancyTab a {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.65em;
+  font-weight: 300;
+  transition: 0.2s;
+  color: #333;
+  text-decoration: none;
+  display: block;
+  padding: 15px 10px 5px;
+}
+
+.fancyTabs {
+  border-bottom: 2px solid #ddd;
+  margin: 15px 0 0;
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+li.fancyTab a {
+  padding-top: 15px;
+  top: -15px;
+  padding-bottom: 0;
+  position: relative;
+}
+
+li.fancyTab.active a {
+  padding-top: inherit;
+}
+
+.fancyTab .fa {
+  font-size: 40px;
+  width: 100%;
+  padding: 15px 0 5px;
+  color: #666;
+  display: block;
+}
+
+.fancyTab.active .fa {
+  color: var(--color-primary) !important;
+}
+
+.fancyTab a:focus {
+  outline: none;
+}
+
+.fancyTabContent {
+  border-color: transparent;
+  box-shadow: 0 -2px 0 -1px #fff, 0 0 0 1px #ddd;
+  padding: 30px 15px 15px;
+  position: relative;
+  background-color: #fff;
+  min-height: 200px;
+}
+
+/* Esconder todos os conteúdos das tabs por padrão */
+.tab-pane {
+  display: none;
+}
+
+/* Mostrar apenas o conteúdo da aba ativa */
+.tab-pane.active {
+  display: block;
+}
+
+.fancyTabContent h2 {
+  color: #232423;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.fancyTabContent p {
+  color: #666;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+.nav-tabs > li.fancyTab.active > a,
+.nav-tabs > li.fancyTab.active > a:focus,
+.nav-tabs > li.fancyTab.active > a:hover {
+  border-width: 0;
+}
+
+.nav-tabs > li.fancyTab:hover {
+  background-color: #f9f9f9;
+  box-shadow: 0 0 0 1px #ddd;
+}
+
+.nav-tabs > li.fancyTab.active:hover {
+  background-color: #fff;
+  box-shadow: 1px 1px 0 1px #fff, 0 0px 0 1px #ddd, -1px 1px 0 0px #ddd inset;
+}
+
+.nav-tabs > li.fancyTab:hover a {
+  border-color: transparent;
+}
+
+.nav.nav-tabs .fancyTab a[data-toggle="tab"] {
+  background-color: transparent;
+  border-bottom: 0;
+}
+
+.nav-tabs > li.fancyTab:hover a {
+  border-right: 1px solid transparent;
+}
+
+.nav-tabs > li.fancyTab > a {
+  margin-right: 0;
+  border-top: 0;
+  padding-bottom: 30px;
+  margin-bottom: -30px;
+}
+
+.nav-tabs > li.fancyTab {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+.nav-tabs > li.fancyTab:last-child a {
+  border-right: 1px solid transparent;
+}
+
+.nav-tabs > li.fancyTab.active:last-child {
+  border-right: 0px solid #ddd;
+  box-shadow: 0px 2px 0 0px #fff, 0px 0px 0 1px #ddd;
+}
+
+.fancyTab:last-child {
+  box-shadow: 0 0 0 1px #ddd;
+}
+
+.tabs .nav-tabs li.fancyTab.active a {
+  box-shadow: none;
+  top: 0;
+}
+
+.fancyTab.active {
+  background: #fff;
+  box-shadow: 1px 1px 0 1px #fff, 0 0px 0 1px #ddd, -1px 1px 0 0px #ddd inset;
+  padding-bottom: 30px;
+}
+
+.arrow-down {
+  display: none;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 22px solid #ddd;
+  position: absolute;
+  top: -1px;
+  left: calc(50% - 20px);
+}
+
+.arrow-down-inner {
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-top: 12px solid #fff;
+  position: absolute;
+  top: -22px;
+  left: -18px;
+}
+
+.fancyTab.active .arrow-down {
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  .fancyTab .fa {
+    font-size: 36px;
+  }
+
+  .fancyTab .hidden-xs {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 992px) {
+  .fancyTab .fa {
+    font-size: 33px;
+  }
+
+  .fancyTab .hidden-xs {
+    font-size: 18px;
+    font-weight: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .fancyTab > a {
+    font-size: 18px;
+  }
+
+  .nav > li.fancyTab > a {
+    padding: 15px 0;
+    margin-bottom: inherit;
+  }
+
+  .fancyTab .fa {
+    font-size: 30px;
+  }
+
+  .nav-tabs > li.fancyTab > a {
+    border-right: 1px solid transparent;
+    padding-bottom: 0;
+  }
+
+  .fancyTab.active .fa {
+    color: #333;
+  }
+
+  .fancyTabs {
+    flex-wrap: wrap;
+  }
+
+  .fancyTab {
+    width: 50% !important;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .fancyTab {
+    width: 100% !important;
+  }
+
+  .fancyTab .fa {
+    font-size: 28px;
+  }
+
+  .fancyTab .hidden-xs {
+    font-size: 16px;
+  }
+
+  #servico {
+    padding: 40px 0;
   }
 }

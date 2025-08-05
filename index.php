@@ -61,7 +61,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nome'], $_POST['email
 
     <section id="video">
         <div class="container flex">
-            <div class="video-section"></div>
+            <div class="video-section">
+                <video src="./imagens/video/Orcamentos-app.mp4" loop muted playsinline></video>
+            </div>
             <div class="conteudo-video">
                 <h2>Gerencie seus orçamentos de forma <b>simples</b> e <b>eficiente</b></h2>
                 <div class="scroll-direita1">
@@ -173,6 +175,127 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nome'], $_POST['email
 
     </section>
 
+    <section id="funcionalidades">
+       <div class="container">
+            <div class="title-depoimentos">
+                <span>Explore as principais funcionalidades</span>
+                <h2>Funcionalidades do Orcame<b>ntos</b></h2>
+            </div>
+            <button id="toggle-grid">Alternar Visualização</button>
+        </div>
+            <ul class="grid">
+                <li class="one"> <span class="s"></span></li>
+                <li class="two"><span class="s"></span></li>
+                <li class="three"><span class="s"></span></li>
+            </ul>
+    </section>
+
+    <section id="servico" class="tabs t-tabs">
+        <div class="container">
+            <ul class="nav nav-tabs fancyTabs" role="tablist">
+            
+                        <li class="tab fancyTab active">
+                        <div class="arrow-down"><div class="arrow-down-inner"></div></div>	
+                            <a id="tab0" href="#tabBody0" role="tab" aria-controls="tabBody0" aria-selected="true" data-toggle="tab" tabindex="0"><i class="fa fa-file-circle-plus" style="color: #080d10;"></i><span class="hidden-xs">Orçamentos Facilitados</span></a>
+                            <div class="whiteBlock"></div>
+                        </li>
+                        
+                        <li class="tab fancyTab">
+                        <div class="arrow-down"><div class="arrow-down-inner"></div></div>
+                            <a id="tab1" href="#tabBody1" role="tab" aria-controls="tabBody1" aria-selected="false" data-toggle="tab" tabindex="0"><i class="fa fa-file-pdf" style="color: #080d10;"></i><span class="hidden-xs">PDF's Personalizados</span></a>
+                            <div class="whiteBlock"></div>
+                        </li>
+                        
+                        <li class="tab fancyTab">
+                        <div class="arrow-down"><div class="arrow-down-inner"></div></div>
+                            <a id="tab3" href="#tabBody3" role="tab" aria-controls="tabBody3" aria-selected="false" data-toggle="tab" tabindex="0"><i class="fa fa-hammer" style="color: #080d10;"></i><span class="hidden-xs">Gestão de Obras</span></a>
+                            <div class="whiteBlock"></div>
+                        </li> 
+                            
+                        <li class="tab fancyTab">
+                        <div class="arrow-down"><div class="arrow-down-inner"></div></div>
+                            <a id="tab4" href="#tabBody4" role="tab" aria-controls="tabBody4" aria-selected="false" data-toggle="tab" tabindex="0"><i class="fa fa-users" style="color: #080d10;"></i><span class="hidden-xs">Cadastro de Clientes</span></a>
+                            <div class="whiteBlock"></div>
+                        </li>
+                        
+                        <li class="tab fancyTab">
+                        <div class="arrow-down"><div class="arrow-down-inner"></div></div>
+                            <a id="tab5" href="#tabBody5" role="tab" aria-controls="tabBody5" aria-selected="false" data-toggle="tab" tabindex="0"><i class="fa fa-dollar-sign" style="color: #080d10;"></i><span class="hidden-xs">Sistema Financeiro</span></a>
+                            <div class="whiteBlock"></div>
+                        </li>
+
+                        <li class="tab fancyTab">
+                        <div class="arrow-down"><div class="arrow-down-inner"></div></div>
+                            <a id="tab2" href="#tabBody2" role="tab" aria-controls="tabBody2" aria-selected="false" data-toggle="tab" tabindex="0"><i class="fa fa-earth-americas" style="color: #080d10;"></i><span class="hidden-xs">Mobile e Desktop</span></a>
+                            <div class="whiteBlock"></div>
+                        </li>
+            </ul>
+            <div id="myTabContent" class="tab-content fancyTabContent" aria-live="polite">
+                
+                        <div class="tab-pane fade active" id="tabBody0" role="tabpanel" aria-labelledby="tab0" aria-hidden="false" tabindex="0">
+                            <div>
+                                <div class="row">                                 
+                                    <div class="col-md-12">
+                                        <h2><strong>Orçamentos Facilitados</strong></h2>
+                                        <p>Crie orçamentos profissionais com agilidade, usando uma interface intuitiva e campos prontos para preenchimento. Adicione itens, serviços, medidas e valores com facilidade. Evite retrabalho e padronize seus processos comerciais.</p>
+                                    </div>                             
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tabBody1" role="tabpanel" aria-labelledby="tab1" aria-hidden="true" tabindex="0">
+                            <div class="row">                              
+                                    <div class="col-md-12">
+                                        <h2><strong>PDF's Personalizados</strong></h2>
+                                        <p>Gere orçamentos em PDF com a logo, cores e dados da sua empresa. Envie arquivos bem estruturados, com aparência profissional e clara. Adicione observações, condições de pagamento e prazo de validade. Surpreenda seus clientes com um material visualmente organizado.</p>
+                                    
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tabBody2" role="tabpanel" aria-labelledby="tab2" aria-hidden="true" tabindex="0">
+                            <div class="row">
+                                    <div class="col-md-12">
+                                        <h2><strong>Mobile e Desktop</strong></h2>
+                                        <p>Use o sistema em qualquer dispositivo, seja no computador ou celular. Ideal para quem precisa acessar informações direto do canteiro de obras. A interface é responsiva, rápida e adaptada para uso em campo.</p>
+                                    
+                                    </div>
+                                </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tabBody3" role="tabpanel" aria-labelledby="tab3" aria-hidden="true" tabindex="0">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h2><strong>Gestão de Obras</strong></h2>
+                                    <p>Controle o andamento de cada obra com etapas, cronograma e status de execução. Acompanhe prazos, custos previstos x realizados e atualizações em tempo real. Evite atrasos e perdas financeiras com uma gestão centralizada. Tenha mais controle desde o planejamento até a entrega final.</p>
+                                        
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tabBody4" role="tabpanel" aria-labelledby="tab4" aria-hidden="true" tabindex="0">
+                            <div class="row">
+                                <div class="col-md-12">
+                                            <h2><strong>Cadastro de Clientes</strong></h2>
+                                            <p>Organize e armazene dados completos dos seus clientes, como nome, telefone, endereço e histórico de orçamentos. Tenha fácil acesso às últimas negociações e preferências de cada um. Facilite o contato e aumente suas chances de conversão.</p>
+                                        
+                                        </div>
+                                    </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="tabBody5" role="tabpanel" aria-labelledby="tab5" aria-hidden="true" tabindex="0">
+                            <div class="row">
+                                <div class="col-md-12">
+                                            <h2><strong>Sistema Financeiro</strong></h2>
+                                            <p>Gerencie entradas, saídas, parcelas e formas de pagamento com controle total. Tenha relatórios claros sobre lucros, despesas e saldo por obra. Automatize cobranças e mantenha suas finanças organizadas. Reduza erros manuais e tome decisões baseadas em dados reais.</p>
+                                        
+                                        </div>
+                                    </div>
+                        </div>
+            </div>
+        </div>
+    </section>
+
     <section id="orcamento" class="orcamento">
         <div class="container">
             <div class="title-orcamento">
@@ -202,6 +325,111 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['nome'], $_POST['email
 <a href="https://wa.me/<?php echo $whatsapp_numero; ?>" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp" title="Link para Whatsapp">
     <img src="imagens/whatsapp-icon.png" alt="WhatsApp">
 </a>
+
+<script>
+    // Controle de reprodução do vídeo baseado na visibilidade da seção
+    document.addEventListener('DOMContentLoaded', function() {
+    const videoSection = document.getElementById('video');
+    const video = videoSection.querySelector('video');
+    
+    // Criar Intersection Observer para detectar quando a seção está visível
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Seção está visível, reproduzir vídeo
+                video.play().catch(e => console.log('Erro ao reproduzir vídeo:', e));
+            } else {
+                // Seção não está visível, pausar vídeo
+                video.pause();
+            }
+        });
+    }, {
+        threshold: 0.3 // Disparar quando 30% da seção estiver visível
+    });
+    
+    // Observar a seção do vídeo
+    observer.observe(videoSection);
+    
+    // Controle do grid 3D na seção de funcionalidades
+    const grid = document.querySelector('.grid');
+    const toggleButton = document.getElementById('toggle-grid');
+    
+    if (toggleButton && grid) {
+        toggleButton.addEventListener('click', function() {
+            grid.classList.toggle('toggle');
+            
+            // Atualizar texto do botão
+            if (grid.classList.contains('toggle')) {
+                this.textContent = 'Visualização 3D';
+            } else {
+                this.textContent = 'Visualização Plana';
+            }
+        });
+    }
+    });
+</script>
+
+<script>
+    $(document).ready(function() {
+        // Controle das tabs
+        $('.fancyTab a').on('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active de todas as tabs
+            $('.fancyTab').removeClass('active');
+            $('.tab-pane').removeClass('active').hide();
+            
+            // Adiciona active na tab clicada
+            $(this).parent().addClass('active');
+            
+            // Mostra o conteúdo correspondente
+            var target = $(this).attr('href');
+            $(target).addClass('active').show();
+        });
+        
+        // Garantir que apenas a primeira aba esteja ativa no carregamento
+        $('.tab-pane').removeClass('active').hide();
+        $('#tabBody0').addClass('active').show();
+        
+        // Ajusta largura das tabs baseado no número
+        var numItems = $('li.fancyTab').length;
+        if (numItems == 12) {
+            $("li.fancyTab").width('8.3%');
+        } else if (numItems == 11) {
+            $("li.fancyTab").width('9%');
+        } else if (numItems == 10) {
+            $("li.fancyTab").width('10%');
+        } else if (numItems == 9) {
+            $("li.fancyTab").width('11.1%');
+        } else if (numItems == 8) {
+            $("li.fancyTab").width('12.5%');
+        } else if (numItems == 7) {
+            $("li.fancyTab").width('14.2%');
+        } else if (numItems == 6) {
+            $("li.fancyTab").width('16.666666666666667%');
+        } else if (numItems == 5) {
+            $("li.fancyTab").width('20%');
+        } else if (numItems == 4) {
+            $("li.fancyTab").width('25%');
+        } else if (numItems == 3) {
+            $("li.fancyTab").width('33.3%');
+        } else if (numItems == 2) {
+            $("li.fancyTab").width('50%');
+        }
+        
+        // Ajusta altura das tabs
+        $('.fancyTabs').each(function() {
+            var highestBox = 0;
+            $('.fancyTab a', this).each(function() {
+                if ($(this).height() > highestBox) {
+                    highestBox = $(this).height();
+                }
+            });
+            $('.fancyTab a', this).height(highestBox);
+        });
+    });
+</script>
+
 </body>
 
 </html>
